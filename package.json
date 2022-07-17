@@ -1,0 +1,14 @@
+{
+  "name": "ceciliaohph",
+  "version": "1.0.0",
+  "description": "Cecilia Oh",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Levy",
+  "license": "ISC",
+  "dependencies": {
+    "reset.css": "^2.0.2"
+  }
+}

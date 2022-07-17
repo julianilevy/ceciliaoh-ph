@@ -1,0 +1,508 @@
+/*#region Animated Burguer Menu Icon */
+
+/* https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+
+.burguer-button {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.bar-change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+/* Fade out the second bar */
+.bar-change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.bar-change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*#endregion */
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  padding: 0 6%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 0.9fr 9.1fr;
+  padding: 2.5rem 0;
+}
+
+.site-title {
+  margin: auto;
+  padding-right: 7.5vw;
+}
+
+.site-title a {
+  font-family: "acumin-pro";
+  font-size: 1.7rem;
+  white-space: nowrap;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.nav-link {
+  position: fixed;
+  display: inline;
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.8rem;
+  text-align: center;
+  color: black;
+  left: 0;
+  right: 0;
+  padding: 1.1rem;
+  transition: bottom ease 0.4s;
+}
+
+.nav-link-1 {
+  bottom: 48%;
+}
+
+.nav-link-2 {
+  bottom: 38%;
+}
+
+.nav-link-selected-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.1rem;
+  margin: auto;
+  border-bottom: solid 2.2px rgb(78, 78, 78);
+}
+
+.nav-link-1-selected-underline {
+  width: 11rem;
+}
+
+.nav-link-2-selected-underline {
+  width: 13.2rem;
+}
+
+.mobile-nav img {
+  height: 23px;
+  width: 23px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -1%;
+  margin: auto;
+  transition: bottom ease 0.4s;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.6rem;
+  padding: 3.4% 0%;
+}
+
+.card:hover img {
+  opacity: 0.8;
+}
+
+.card img {
+  width: 100%;
+  transition: opacity ease 0.3s;
+}
+
+.card h3 {
+  font-family: "acumin-pro";
+  font-size: 1.4rem;
+  text-align: center;
+  color: black;
+  margin: 0.65rem 0;
+}
+
+footer {
+  margin: 2rem 0;
+}
+
+footer p {
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.95rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1.1rem;
+  margin: auto;
+}
+
+footer div {
+  padding: 1.7rem;
+}
+
+.social-icon {
+  display: block;
+  height: 28px;
+  width: 28px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: opacity ease 0.3s;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+.social-icon img {
+  filter: invert(100%);
+  padding: 7px;
+}
+
+.contact-main {
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 4.5% 0;
+}
+
+.contact-main p {
+  margin: 1.8rem 0;
+}
+
+.contact-main strong {
+  font-weight: 600;
+}
+
+.page-title {
+  font-family: "acumin-pro";
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  white-space: nowrap;
+  text-align: center;
+  margin: 3rem 0 4rem;
+}
+
+.page-optional-link-subtitle {
+  text-align: center;
+  margin: -0.9rem 0 clamp(66px, 7.1vw, 120px);
+}
+
+.page-optional-link-subtitle a {
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  font-size: clamp(1.22rem, 1.5vw, 1.5rem);
+  white-space: nowrap;
+  color: black;
+  border-bottom: solid 1.3px rgb(78, 78, 78);
+}
+
+.masonry-gallery {
+  columns: 2;
+  gap: clamp(0.27rem, 0.8vw, 0.7rem);
+  margin: 3rem 0 2.5rem;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  margin-bottom: clamp(0.05rem, 0.5vw, 0.5rem);
+  cursor: zoom-in;
+}
+
+.previous-and-next-page-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.previous-and-next-page-button-container h3 {
+  display: inline-block;
+  font-family: "acumin-pro";
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  color: black;
+}
+
+.previous-page-button-container a,
+.next-page-button-container a {
+  display: flex;
+  align-items: center;
+}
+
+.previous-page-button-container img,
+.next-page-button-container img {
+  height: clamp(35px, 3vw, 50px);
+  width: clamp(35px, 3vw, 50px);
+}
+
+.previous-page-button-container img {
+  margin-right: 1.2rem;
+}
+
+.next-page-button-container img {
+  margin-left: 1.2rem;
+}
+
+.zoomed-image-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.zoomed-image-header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  width: 100%;
+  padding: clamp(13.5px, 1.7vw, 25.6px) clamp(13.5px, 1.7vw, 25.6px) 0
+    clamp(13.5px, 1.7vw, 25.6px);
+}
+
+.zoomed-image-header img {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.zoomed-image-container {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - clamp(90px, 13vw, 140px));
+  padding: 1% 6%;
+  z-index: 1;
+}
+
+.zoomed-image-desktop-control-container,
+.zoomed-image-desktop-right-control,
+.zoomed-image-desktop-left-control {
+  display: hidden;
+}
+
+.zoomed-image {
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  cursor: grab;
+  user-select: none;
+}
+
+.zoomed-image-will-move-from-right {
+  position: relative;
+  transition: left ease 0.2s, opacity ease 0.3s;
+}
+
+.zoomed-image-will-move-from-left {
+  position: relative;
+  transition: right ease 0.2s, opacity ease 0.3s;
+}
+
+.zoomed-image-is-right {
+  left: 90px;
+  opacity: 0;
+}
+
+.zoomed-image-is-left {
+  right: 90px;
+  opacity: 0;
+}
+
+.zoomed-image-is-centered-from-right {
+  left: 0;
+  opacity: 1;
+}
+
+.zoomed-image-is-centered-from-left {
+  right: 0;
+  opacity: 1;
+}
+
+/*#region Fade In & Out */
+
+.can-fade {
+  transition: opacity ease 0.4s;
+}
+
+.faded-out {
+  opacity: 0;
+}
+
+.faded-in {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/*#endregion */
+
+@media (max-width: 516px) {
+  .previous-and-next-page-button-container-br-span-1::before {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-title a {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .previous-and-next-page-button-container-br-span-2::before {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 3.3%;
+  }
+
+  header {
+    grid-template-columns: 1fr auto;
+    padding: 5vw 0;
+  }
+
+  .burguer-button {
+    display: none;
+  }
+
+  .site-title {
+    padding-right: initial;
+    margin: initial;
+  }
+
+  .site-title a {
+    font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  }
+
+  .desktop-nav {
+    display: initial;
+  }
+
+  .desktop-nav a {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    color: black;
+    margin-left: clamp(1.35rem, 3vw, 3.2rem);
+  }
+
+  .desktop-nav img {
+    position: relative;
+    height: 20.5px;
+    width: 20.5px;
+    top: 3.5px;
+  }
+
+  .desktop-nav-link-selected-underline {
+    border-bottom: solid 1.8px rgb(78, 78, 78);
+    padding: 0.1rem 0;
+  }
+
+  .main-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.6rem;
+    margin: 3rem 2rem 3.5rem;
+  }
+
+  footer p,
+  footer div {
+    padding: initial;
+  }
+
+  .zoomed-image-container {
+    padding: 1% 7.8%;
+  }
+
+  .zoomed-image-desktop-control-container {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(100% - clamp(90px, 13vw, 140px));
+    width: 100%;
+    padding: 1% 2.2%;
+    z-index: 2;
+    user-select: none;
+  }
+
+  .zoomed-image-desktop-right-control {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .zoomed-image-desktop-left-control {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .zoomed-image-desktop-right-control img,
+  .zoomed-image-desktop-left-control img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+  }
+
+  .zoomed-image {
+    cursor: initial;
+  }
+
+  .zoomed-image-will-move-from-right,
+  .zoomed-image-will-move-from-left {
+    position: initial;
+    transition: opacity ease 0.4s;
+  }
+
+  .zoomed-image-is-right {
+    left: 0;
+    opacity: 0;
+  }
+
+  .zoomed-image-is-left {
+    right: 0;
+    opacity: 0;
+  }
+}
